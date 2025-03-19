@@ -1,6 +1,7 @@
 # Knowledge Distillation and Model Optimization Pipeline
-
 This repository demonstrates a complete pipeline for optimizing deep learning models through a series of techniques designed to create efficient, deployment-ready models without sacrificing performance.
+
+![image_ca49121d8a](https://github.com/user-attachments/assets/94714675-efcc-43c8-bfdf-4f5b1188bc76)
 
 ## Overview
 
