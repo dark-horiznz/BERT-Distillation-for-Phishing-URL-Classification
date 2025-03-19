@@ -7,7 +7,7 @@ This repository demonstrates a complete pipeline for optimizing deep learning mo
 The pipeline consists of four main stages:
 1. **Teacher Model Fine-tuning** - Optimize a large pre-trained model for the target task
 2. **Knowledge Distillation** - Transfer knowledge from teacher to a smaller student model
-3. **Student Model Fine-tuning** - Compare Student DIstillation with Standard Fine-Tuning
+3. **Student Model Fine-tuning** - Compare Student Distillation with Standard Fine-Tuning
 4. **Post-training Quantization** - Compress the model for deployment in resource-constrained environments
 
 ## Repository Structure
