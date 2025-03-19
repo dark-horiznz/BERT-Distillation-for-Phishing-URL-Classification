@@ -27,7 +27,7 @@ The pipeline consists of four main stages:
 |-------|----------|-----------|--------|----------|-------|
 | Teacher (BERT base) | 0.8711 | 0.9073 | 0.8267 | 0.8651 | Full-sized model |
 | Student (Distilled) | 0.9267 | 0.9486 | 0.9022 | 0.9248 | Smaller architecture |
-| Student (Fine-tuned) | 0.8620 | - | - | - | AUC: 0.946 |Base Student model
+| Student (Fine-tuned) | 0.8620 | - | - | - |Base Student model|
 | Student (Quantized) | 0.9156 | 0.9401 | 0.8908 | 0.9148 | 4-bit quantization |
 
 ## Pipeline Details
@@ -72,7 +72,7 @@ def distillation_loss(student_logits, teacher_logits, true_labels, temperature, 
 
 ### 3. Student Model Fine-tuning
 
-After distillation, we further fine-tune the student model on the target dataset to enhance performance.
+After distillation, we  fine-tune the base student model on the target dataset to compare performance with our distllation training performance.
 
 ### 4. Post-training Quantization
 
@@ -98,7 +98,7 @@ model_nf4 = AutoModelForSequenceClassification.from_pretrained(model_id,
 
 1. Start by running `Finetuning_Teacher.ipynb` to create a well-tuned teacher model
 2. Run `Distillation_on_student_model.ipynb` to transfer knowledge to the student model
-3. Run `Finetuning_Student.ipynb` for additional fine-tuning of the student model
+3. Run `Finetuning_Student.ipynb` for comaparitive study of fine-tuning on the student model
 4. Run `Post_Training_Quantisation_on_Student.ipynb` to create a deployment-ready quantized model
 
 ## Requirements
