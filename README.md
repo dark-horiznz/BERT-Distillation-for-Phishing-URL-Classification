@@ -16,7 +16,7 @@ The pipeline consists of four main stages:
 .
 ├── Finetuning_Teacher.ipynb         # Fine-tune the teacher model on your dataset
 ├── Distillation_on_student_model.ipynb  # Train a lightweight student model via distillation
-├── Finetuning_Student.ipynb         # Further fine-tune the distilled student model
+├── Finetuning_Student.ipynb         # Further fine-tune the base student model
 ├── Post_Training_Quantisation_on_Student.ipynb  # Apply quantization for model compression
 └── README.md                        # This file
 ```
@@ -27,7 +27,7 @@ The pipeline consists of four main stages:
 |-------|----------|-----------|--------|----------|-------|
 | Teacher (BERT base) | 0.8711 | 0.9073 | 0.8267 | 0.8651 | Full-sized model |
 | Student (Distilled) | 0.9267 | 0.9486 | 0.9022 | 0.9248 | Smaller architecture |
-| Student (Fine-tuned) | 0.8620 | - | - | - | AUC: 0.946 |
+| Student (Fine-tuned) | 0.8620 | - | - | - | AUC: 0.946 |Base Student model
 | Student (Quantized) | 0.9156 | 0.9401 | 0.8908 | 0.9148 | 4-bit quantization |
 
 ## Pipeline Details
